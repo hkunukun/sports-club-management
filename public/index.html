@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sports Club Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Sports Club Management</h1>
+        <p>Manage Players, Sports and Club Activities</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#sports">Sports</a>
+        <a href="#players">Players</a>
+        <a href="#add-player">Add Player</a>
+        <a href="#coaches">Coaches</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="home" class="welcome">
+            <h2>Welcome to Our Sports Club</h2>
+            <p>
+                Join our sports club to develop your skills, stay active,
+                and participate in exciting sporting activities.
+            </p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="totalPlayers">7</h3>
+                    <p>Total Players</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>5</h3>
+                    <p>Sports Available</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Active</h3>
+                    <p>Club Status</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sports" class="section">
+            <h2>Available Sports</h2>
+
+            <div class="sports-container">
+
+                <div class="sport-card">
+                    <div class="sport-icon">🏏</div>
+                    <h3>Cricket</h3>
+                    <p>Improve your batting, bowling, and fielding skills.</p>
+                </div>
+
+                <div class="sport-card">
+                    <div class="sport-icon">⚽</div>
+                    <h3>Football</h3>
+                    <p>Develop teamwork, fitness, and ball control.</p>
+                </div>
+
+                <div class="sport-card">
+                    <div class="sport-icon">🏸</div>
+                    <h3>Badminton</h3>
+                    <p>Build speed, coordination, and accuracy.</p>
+                </div>
+
+                <div class="sport-card">
+                    <div class="sport-icon">🎾</div>
+                    <h3>Tennis</h3>
+                    <p>Practice your serving and court skills.</p>
+                </div>
+
+                <div class="sport-card">
+                    <div class="sport-icon">🏀</div>
+                    <h3>Basketball</h3>
+                    <p>Improve shooting, passing, and teamwork.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="players" class="section">
+            <h2>Registered Players</h2>
+
+            <p id="playerMessage" class="message" role="status"></p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Sport</th>
+                            <th>Age</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="playersTableBody">
+                        <tr>
+                            <td colspan="5">Loading players...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="add-player" class="section">
+            <h2>Add New Player</h2>
+
+            <form id="playerForm">
+
+                <label for="playerName">Player Name</label>
+                <input
+                    type="text"
+                    id="playerName"
+                    name="name"
+                    placeholder="Enter player name"
+                    required
+                >
+
+                <label for="playerSport">Select Sport</label>
+                <select id="playerSport" name="sport" required>
+                    <option value="">Choose a sport</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Football">Football</option>
+                    <option value="Badminton">Badminton</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Basketball">Basketball</option>
+                </select>
+
+                <label for="playerAge">Age</label>
+                <input
+                    type="number"
+                    id="playerAge"
+                    name="age"
+                    min="1"
+                    max="100"
+                    placeholder="Enter age"
+                    required
+                >
+
+                <button type="submit">Add Player</button>
+
+            </form>
+
+            <p id="formMessage" class="message" role="status"></p>
+        </section>
+
+        <section id="coaches" class="section">
+            <h2>Our Coaches</h2>
+
+            <div class="coaches-container">
+                <div class="coach-card">
+                    <span>👨‍🏫</span>
+                    <h3>Mr. Raj</h3>
+                    <p>Cricket Coach</p>
+                </div>
+
+                <div class="coach-card">
+                    <span>👨‍🏫</span>
+                    <h3>Mr. Kumar</h3>
+                    <p>Football Coach</p>
+                </div>
+
+                <div class="coach-card">
+                    <span>👩‍🏫</span>
+                    <h3>Ms. Priya</h3>
+                    <p>Badminton Coach</p>
+                </div>
+
+                <div class="coach-card">
+                    <span>👨‍🏫</span>
+                    <h3>Mr. Suresh</h3>
+                    <p>Tennis Coach</p>
+                </div>
+
+                <div class="coach-card">
+                    <span>👨‍🏫</span>
+                    <h3>Mr. Arun</h3>
+                    <p>Basketball Coach</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <h2>Contact Us</h2>
+            <p>Email: sportsclub@example.com</p>
+            <p>Location: College Sports Complex</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sports Club Management. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

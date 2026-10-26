@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #123c69, #1d70a2);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+.navbar {
+    background-color: #102f4f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #287db0;
+}
+
+main {
+    width: 94%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.welcome,
+.section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcome {
+    text-align: center;
+}
+
+.welcome h2,
+.section h2 {
+    color: #123c69;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.stat-card {
+    background-color: #eaf4fb;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.stat-card h3 {
+    color: #1769aa;
+    font-size: 25px;
+}
+
+.sports-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.sport-card {
+    min-width: 0;
+    text-align: center;
+    background-color: #f1f8fd;
+    border: 1px solid #d5e8f5;
+    border-radius: 9px;
+    padding: 18px 12px;
+    transition: transform 0.2s;
+}
+
+.sport-card:hover {
+    transform: translateY(-4px);
+}
+
+.sport-icon {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.sport-card h3 {
+    color: #1769aa;
+    margin-bottom: 8px;
+}
+
+.sport-card p {
+    font-size: 14px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dce3ea;
+    text-align: center;
+}
+
+th {
+    background-color: #123c69;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f6fa;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+.delete-button {
+    background-color: #c62828;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #9f1d1d;
+}
+
+form {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bdc9d4;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus {
+    outline: 2px solid #74b9e5;
+    border-color: #1769aa;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1769aa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #123c69;
+}
+
+.message {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.coaches-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.coach-card {
+    text-align: center;
+    background-color: #f1f8fd;
+    border: 1px solid #d5e8f5;
+    padding: 18px 10px;
+    border-radius: 9px;
+}
+
+.coach-card span {
+    font-size: 30px;
+}
+
+.coach-card h3 {
+    color: #1769aa;
+    margin-top: 5px;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #102f4f;
+    color: white;
+    padding: 18px;
+    margin-top: 25px;
+}
+
+/* Keep cards in one row on wider screens.
+   Allow horizontal scrolling on smaller screens. */
+@media (max-width: 900px) {
+    .sports-container,
+    .coaches-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .sports-container,
+    .coaches-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .welcome,
+    .section {
+        padding: 16px;
+    }
+}
