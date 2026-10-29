@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 const Player = require("./models/player");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/sportsclub";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/sportsclub";
 
 // GET: Display all players
 app.get("/api/players", async (req, res) => {
