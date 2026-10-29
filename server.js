@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-const Player = require("./models/Player");
+const Player = require("./models/player");
 
 const app = express();
 const PORT = 3000;
